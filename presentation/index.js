@@ -34,7 +34,14 @@ require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
-    city: require("../assets/city.jpg")
+    city: require("../assets/city.jpg"),
+    unpackingWebpack: [
+        require('../assets/unpacking_webpack_3.png'),
+    	require('../assets/unpacking_webpack_1.png'),
+    	require('../assets/unpacking_webpack_2.png'),
+    	require('../assets/unpacking_webpack_4.png'),
+    	require('../assets/unpacking_webpack_5.png')
+    ]
 };
 
 preloader(images);
@@ -52,6 +59,25 @@ export default class Presentation extends React.Component {
                 <Deck transition={["slide"]} transitionDuration={150}>
                     <Slide>
                         <Heading>Unpacking Webpack</Heading>
+                    </Slide>
+
+                    <Slide>
+                    	<Appear><Image src={images.unpackingWebpack[0]} /></Appear>
+                    	<Appear><Image src={images.unpackingWebpack[1]} /></Appear>
+                    	<Appear><Image src={images.unpackingWebpack[2]} /></Appear>
+                    	<Appear><Image src={images.unpackingWebpack[3]} /></Appear>
+                    	<Appear><Image src={images.unpackingWebpack[4]} /></Appear>
+                    </Slide>
+
+                    <Slide>
+                    	<Heading fit={true}>Brief history of Websites / Web apps</Heading>
+                    	<List style={{color: 'white'}}>
+                    		<Appear><ListItem>Static Content - dumb pages served to the client</ListItem></Appear>
+                    		<Appear><ListItem>Pages dynamically rendered on the server</ListItem></Appear>
+                    		<Appear><ListItem>Client-side code shipped with website to augment UX</ListItem></Appear>
+                    		<Appear><ListItem>Wild West AJAX / XHR era</ListItem></Appear>
+                    		<Appear><ListItem>Single Page Apps (SPAs)</ListItem></Appear>
+                    	</List>
                     </Slide>
                 </Deck>
             </Spectacle>
