@@ -19,7 +19,8 @@ import {
     Quote,
     Slide,
     Spectacle,
-    Text
+    Text,
+    Table, TableRow, TableHeaderItem, TableItem
 } from "spectacle";
 
 // Import image preloader util
@@ -61,7 +62,7 @@ export default class Presentation extends React.Component {
                         <Heading>Unpacking Webpack</Heading>
                     </Slide>
 
-                    <Slide>
+                    <Slide bgColor="accent">
                     	<Appear><Image src={images.unpackingWebpack[0]} /></Appear>
                     	<Appear><Image src={images.unpackingWebpack[1]} /></Appear>
                     	<Appear><Image src={images.unpackingWebpack[2]} /></Appear>
@@ -70,14 +71,40 @@ export default class Presentation extends React.Component {
                     </Slide>
 
                     <Slide>
-                    	<Heading fit={true}>Brief history of Websites / Web apps</Heading>
+                    	<Heading fit={true}>Brief history of web trends</Heading>
                     	<List style={{color: 'white'}}>
                     		<Appear><ListItem>Static Content - dumb pages served to the client</ListItem></Appear>
                     		<Appear><ListItem>Pages dynamically rendered on the server</ListItem></Appear>
                     		<Appear><ListItem>Client-side code shipped with website to augment UX</ListItem></Appear>
                     		<Appear><ListItem>Wild West AJAX / XHR era</ListItem></Appear>
                     		<Appear><ListItem>Single Page Apps (SPAs)</ListItem></Appear>
+                    		<Appear><ListItem>...</ListItem></Appear>
+                    		<Appear><ListItem>Future: Back to static sites?!?</ListItem></Appear>
                     	</List>
+                    </Slide>
+
+                    <Slide bgColor="accent">
+                    	<Heading fit={true}>Single Page Applications</Heading>
+                    	<Text>&nbsp;</Text>
+                    	<Table style={{color: 'white'}}>
+                    		<TableRow style={{borderBottom: '1px solid white'}}>
+                    			<TableHeaderItem style={{borderRight: '1px solid white'}}>Advantages</TableHeaderItem>
+                    			<TableHeaderItem>Disadvantages</TableHeaderItem>
+                    		</TableRow>
+
+                    		<TableRow>
+                    			<TableItem style={{borderRight: '1px solid white', padding: '0 10px 20px 0'}}>Push computational effort down to the client</TableItem>
+                    			<TableItem style={{paddingBottom: '20px'}}>SEO - Solved by Google & Server-side rendering</TableItem>
+                    		</TableRow>
+                    		<TableRow>
+                    			<TableItem style={{borderRight: '1px solid white', padding: '0 10px 20px 0'}}>Quick navigation and transtiions</TableItem>
+                    			<TableItem style={{paddingBottom: '20px'}}>Complexity!</TableItem>
+                    		</TableRow>
+                    		<TableRow>
+                    			<TableItem style={{borderRight: '1px solid white', padding: '0 10px 20px 0'}}>Offline capability</TableItem>
+                    			<TableItem style={{paddingBottom: '20px'}}>Dealing with network issues</TableItem>
+                    		</TableRow>
+                    	</Table>
                     </Slide>
                 </Deck>
             </Spectacle>
