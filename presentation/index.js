@@ -106,6 +106,37 @@ export default class Presentation extends React.Component {
                     		</TableRow>
                     	</Table>
                     </Slide>
+
+                    <Slide bgColor="accent">
+                   		<Heading fit={true}>What developers want:</Heading>
+                   		<List style={{color: 'white'}}>
+                    		<Appear><ListItem>Ease of use (TS, ES6, Less, Sass, etc)</ListItem></Appear>
+                    		<Appear><ListItem>Separation of concerns</ListItem></Appear>
+                    		<Appear><ListItem>Being DRY</ListItem></Appear>
+                    	</List>
+                    </Slide>
+
+                    <Slide bgColor="accent">
+                   		<Heading fit={true}>Performance / Browser requirements:</Heading>
+                   		<List style={{color: 'white'}}>
+                    		<Appear><ListItem>Cross-browser compatible code</ListItem></Appear>
+                    		<Appear><ListItem>Less round trips to the server</ListItem></Appear>
+                    	</List>
+                    </Slide>
+
+                    <Slide>
+                    	<Heading fit={true}>Grunt => Gulp => Webpack: An interactive journey</Heading>
+                    </Slide>
+
+                    <Slide bgColor="accent">
+                    	<Heading>Grunt</Heading>
+                    	// TODO(AM): Insert Ignite grunt config
+                    </Slide>
+
+                    <Slide bgColor="accent">
+                    	<Heading>Gulp</Heading>
+                    	// TODO(AM): Insert gulp config
+                    </Slide>
                 </Deck>
             </Spectacle>
         );
